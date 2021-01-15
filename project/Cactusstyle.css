@@ -1,5 +1,23 @@
+header {
+    background-color: #41B3A3;
+    color: #c38d9e;
+    font-size: ;
+    font-weight: ;
+    text-decoration: none;
+}
+
 section {
     background-color: #BC986A;
     color: #FBEEC1;
     font-size: 50px;
+}
+footer {
+    background-color: ;
+    color: ;
+    text-decoration: none;
+}
+body {
+    background-color: ;
+    color: ;
+    text-decoration: none; 
 }
