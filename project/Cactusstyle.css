@@ -12,8 +12,9 @@ section {
     font-size: 50px;
 }
 footer {
-    background-color: ;
-    color: ;
+    background-color: black;
+    color: white;
+    font-size: 40px;
     text-decoration: none;
 }
 body {
