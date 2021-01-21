@@ -7,13 +7,23 @@ header {
 }
 
 section {
-    background-color: #fbeec1;
+    background-color: #659DBD;
     color: #FBEEC1;
-    font-size: 50px;
+    font-size: 25px;
 }
 footer {
     background-color: #BC986A;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.fullImage {
+    width: 100%;
+}
+.halfImage {
+    width: 49%;
 }
