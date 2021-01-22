@@ -27,3 +27,6 @@ a {
 .halfImage {
     width: 49%;
 }
+.efullImage {
+    width: 100% height: 10%;
+}
