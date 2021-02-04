@@ -6,7 +6,7 @@ header {
     justify-content: space-evenly;
     background-color: #BC986A;
     color: black;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 50;
     text-decoration: none;
 }
@@ -66,4 +66,15 @@ div {
 }
 .textbox {
     padding-left: 10px;
+    width: 49%;
+}
+.body {
+    font-family: Rigatoni;
+}
+.headerFlex {
+    display:flex;
+    justify-content: space-around;
+}
+.topspace {
+    margin-top: 100px;
 }
