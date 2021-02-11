@@ -9,3 +9,11 @@ p {
 p{
     line-height: 2;
 }
+canvas {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+.section-canvas {
+    text-align: center;
+}
