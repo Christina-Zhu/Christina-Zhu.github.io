@@ -11,9 +11,15 @@ p{
 }
 canvas {
     border-style: solid;
-    border-color: black;
+    border-color: #bab2b5;
     border-width: 1px;
 }
 .section-canvas {
     text-align: center;
+}
+.index {
+    color: #c38d9e;
+}
+.title {
+    color: #E27D60;
 }
