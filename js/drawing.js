@@ -1,12 +1,20 @@
 var draw;
-var unit = 15;
-document.onkeydown = checkKey;
+var unit = 25;
+var x = 0;
+var y = 0;
+var scale = 1;
+var characterX = 0;
+var characterY = 14*unit;
+var direction =1;
+var isJumping = false;
+var isGoingUp = true;
+var time = 0;
 
-
+const scaleChange = 0.1;
 
 // When the window is loaded, call (use) the init fuction.
 window.onload = init;
-
+document.onkeydown = checkKey;
 // Comment (Comman + / or Ctrl + /)
 //   - Block within code that the computer skips over.
 //   - Meant to be seen by humans
@@ -25,6 +33,7 @@ function init() {
     draw = canvas.getContext("2d");
     draw.canvas.width = 1350;
     draw.canvas.height = 760;
+    updateUI();
 
     //drawHeart() ;
     //drawSunglass() ;
@@ -33,23 +42,62 @@ function init() {
 }
 function checkKey(e) {
     if (e.keyCode == '32') { // space
+        x = 0;
+        y = 0;
+        scale = 1;
         draw.resetTransform();
     }
     if (e.keyCode == '37') {//left arrow
+        x--;
         draw.translate(-unit,0);
     }
     if (e.keyCode == '38') {// up arrow
+        y--;
         draw.translate(0,-unit);
     }
     if (e.keyCode == '39') {// right arrow
+        x++;
         draw.translate(unit,0);
     }
     
     if (e.keyCode == '40') { // down arrow
+        y++;
         draw.translate(0,unit);
     }  
+    if (e.keyCode == '65') { // a (left)
+        characterX -= 3;
+        direction =-1;
+        
+        animateKirby (characterX,direction,1);
+    }  
+    if (e.keyCode == '68') { // d (right)
+        characterX += 3;
+        direction = 1;
+        animateKirby (characterX,direction,1);
+    }  
+    if (e.keyCode == '87') {
+        isJumping = true;
+        animateKirby(characterX,direction,0);
+    }
+    if (e.keyCode == '187') { // +
+        draw.scale(1/scale,1/scale);
+        scale += scaleChange; 
+        draw.scale(scale,scale);
+    }  
+    if (e.keyCode == '189') { // -
+        draw.scale(1/scale,1/scale);
+        scale -= scaleChange;
+        draw.scale(scale,scale);
+    }
+    updateUI();
 }
 
+
+function updateUI() {
+    document.getElementById("xTranslate").innerHTML = "X : " + x;
+    document.getElementById("yTranslate").innerHTML = "Y : " + y; 
+    document.getElementById("scale").innerHTML = "Scale : " + scale; 
+}
 
 function drawHeart() {
     draw.fillStyle = 'red';
@@ -919,3 +967,12 @@ function drawPicachu() {
     draw.restore();
 }
 
+
+    
+
+function drawBackground() {
+    draw.fillStyle = "skyblue";
+    draw.fillRect(0,0,100*unit,100*unit);
+    drawGroundBlocks();
+}
+    

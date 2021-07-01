@@ -6,6 +6,7 @@
         <script src="js/ruler.js"></script>
         <script src="js/kirby.js"></script>
         <script src="js/kirby2.js"></script>
+        <script src="js/groundBlock.js"></script>
     </head>
     
     <body>
@@ -19,13 +20,23 @@
             <a href="javascript:drawName()">Name</a>
             <a href="javascript:drawRuler(10)">Ruler</a>
             <a href="javascript:drawPicachu()">Picachu</a>
-            <a href="javascript:drawKirby()">Kirby</a>
+            <a href="javascript:drawKirby(0)">Kirby</a>
             <a href="javascript:drawKirbyWalk1()">KirbyWalk1</a>
             <a href="javascript:drawKirbyWalk2()">KirbyWalk2</a>
+            <a href="javascript:drawKirbyWalk3()">KirbyWalk3</a>
+            <a href="javascript:drawTile()">Tile</a>
+            <a href="javascript:drawBackground()">GroundBlock</a>
         </nav>
         <section>
             <canvas id="myCanvas"></canvas>
         </section>
+        <div>
+            <p id="xTranslate">X : 0</p>
+            <p id="yTranslate">Y : 0</p>
+            <p id="scale">Scale: 1</p>
+            
+
+        </div>
         <footer>
             <p>&copy; 2021</p>
 

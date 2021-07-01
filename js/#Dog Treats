@@ -1,0 +1,13 @@
+#Dog Treats
+
+small = int(input())
+medium = int(input())
+large = int(input())
+
+a =  small*1 + medium*2 + large*3
+if a> 10:
+	print("Happy");
+else:
+	print("Sad");
+
+	
